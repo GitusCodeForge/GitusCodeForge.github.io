@@ -30,16 +30,23 @@
 	  <p>Aegis is a self-hosted <a href="https://en.wikipedia.org/wiki/Forge_(software)">code forge</a> that mainly supports the <a href="https://git-scm.com">Git distributed version control system</a>.</p>
 
 	  <p><b>Latest Release: <a href="https://github.com/AegisCodeForge/aegis/releases/tag/v0.1.4">v0.1.4 (2025-09-24)</a></b><br />
-		<b>Latest Nightly: <a href="https://github.com/AegisCodeForge/aegis/tree/d2c55389efc65fa6c67b899d60c571a4fc9f1358">v0.1.4,0 (2025-09-24)</a></b></p>
+		<b>Latest Nightly: <a href="https://github.com/AegisCodeForge/aegis/tree/d2c55389efc65fa6c67b899d60c571a4fc9f1358">v0.1.5-alpha,170 (2025-11-27)</a></b></p>
 
 	  <ul>
 		<li>Simple, functional UI;</li>
 		<li>Support read-only clone by HTTP and read/write access through SSH;</li>
 		<li>Support for issue tracking and pull requests;</li>
-		<li>Support for namespaces;</li>
+		<li>Support for namespaces (which you can turn off at installation time);</li>
 		<li>Support for per-namespace and per-repository user access control;</li>
 		<li>Webhooks for external CI/CD (experimental feature; subject to change)</li>
 		<li>Support for snippets (à la GitHub snippets)</li>
+		<li>Multiple operation mode for different needs:
+		  <ul>
+			<li>Plain Mode for when you only need to have a web interface, similar to <code>git-instaweb</code>.</li>
+			<li>Simple Mode for when you only need mininum features like creating repositories, push/pull by SSH and basic access control.</li>
+			<li>Normal Mode, which comes with all the usual features.</li>
+		  </ul>
+		</li>
 		<li>And many tiny things:
 		  <ul>
 			<li>Support labels for repositories;</li>
@@ -49,7 +56,7 @@
 			<li><code>Co-Authored-By</code></li>
 		  </ul>
 		</li>
-		<li>No JavaScript - works all major browsers and a lot of minor ones, including <a href="https://ladybird.org">Ladybird</a> and <a href="https://www.netsurf-browser.org">NetSurf</a>.</li>
+		<li>No JavaScript - works all major browsers and a lot of minor ones, including <a href="https://ladybird.org">Ladybird</a>, <a href="http://kmeleonbrowser.org">K-Meleon</a> and <a href="https://www.netsurf-browser.org">NetSurf</a>.</li>
 		<li>Proper web installer for easy(-er) installation;</li>
 	  </ul>
 
