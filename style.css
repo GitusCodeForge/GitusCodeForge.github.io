@@ -6,7 +6,7 @@
 
 :root {
 	--foreground-color: white;
-	--background-color: #1f1f1f;;
+	--background-color: black;;
 	--white-shade-degree-0: #ffffff1f;
 	--white-shade-degree-1: #ffffff3f;
 	--white-shade-degree-2: #ffffff7f;
@@ -66,12 +66,11 @@ footer {
 }
 
 hr {
-	height: 4px;
+	height: 1px;
 	border: none;
 	background-color: var(--foreground-color);
 }
 .header-name {
-	font-size: 3rem;
 	display: inline;
 	margin: 0;
 }
