@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Gitus Code Forge</title>
+	<link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+	<header>
+	  <div class="header-nav">
+		<div class="header-nav-left">
+		  <a href="./index.html">HOME</a>
+		  <a href="https://github.com/GitusCodeForge/Gitus">CODE_REPOSITORY</a>
+		  <a href="./news.html">NEWS</a>
+		</div>
+	  </div>
+
+	  <div style="margin-top:1em">
+		<img style="vertical-align: bottom" height="32" src="./logo.png" alt="Gitus Logo" /><br />
+		<h1 class="header-name">Gitus Code Forge</h1>
+	  </div>
+	</header>
+
+	<hr />
+
+	<div>
+
+	  <p>It's hard for me to talk about this, really.</p>
+	  <p>Even though I didn't mention this here - Gitus has been a project that's free from any LLM-contributed code in the last one-year-and-a-half, and I take pride in it. For the longest time I've been putting off LLM usage on this project, because (beside a plethora of other reasons) I really want this project to be a proof of some sort; this project - I sincerely believed - would remain to be the one unmistakable proof that I <i>am</i> a proper software designer who is honest to my craft. But alas, this might be the end of it.</p>
+	  <p>Before this I was already using LLM, both in my day job and in Gitus; but for Gitus I've used it for security audits only, I still write all the code with my own two hands. But now I cannot in good faith subject myself to that anymore, both for the sake of the project itself and my own mental health. For example, these are two of my biggest griefs about the current version of the code base:</p>
+
+	  <ul>
+		<li>Currently Gitus only supports PostgreSQL and SQLite as the two kinds of database for the "main" database. Support for MariaDB <a href="https://github.com/GitusCodeForge/Gitus/issues/62">was intended more than a year ago</a> but never finished. I can't bring myself to finish it - the major part of the PostgreSQL support code, by the time of writing, is <a href="https://github.com/GitusCodeForge/Gitus/blob/c9f128aaec6e4fef1ae3919b9d99654a16237fd9/pkg/gitus/db/postgres/query.go">around 3k lines</a> all of which consists of nothing but mundane CRUD boilerplate-level stuff; supporting MariaDB requires writing this 3k lines of code again plus all the needed testings.</li>
+		<li>Currently the SQLite interface code in Gitus has a severe bug that can leak memory - I allocate prepared statements but never recycle them (because back then I thought they're automatically disposed after query...). Fixing this requires manually going through the ~3k lines of code plus all the testings needed to ensure the fix didn't make it regress.
+		</li>
+	  </ul>
+
+	  <p>Even if one can argue that most of them can be done via copy-paste and I don't have to rewrite literally every single line of code again, whatever's left after that would still take me an enormous amount of time - the time that (1) provides almost nothing useful to me (I already learned my lessons from them) and (2) could've been spent on something better & more useful. There's still ~60 issues for Gitus on GitHub by the time of writing this, most of which are feature requests that I myself deemed useful and thus needed; if I have to do all of this manually, Gitus may never reach a truly presentable state, and that won't do. My feelings (or anyone's feelings) be damned; <b>Gitus must, before anything, be a working and useful piece of software to people, or else there's no meaning in either making it or maintaining it.</b> </p>
+
+	  <p>There's also this aspect of things that I want to mention here: GenAIs are seriously tools of the (lumpen)proletariat. I created Gitus not just because I want to learn the internals of Git; I created Gitus because I despise Drew DeVault so much that I cannot bear the thought of keep using SourceHut and subjecting myself to his control of it. With LLMs and coding agents I finally have the chance of staying away from things that could turn upon you at a moment's notice, as long as I accept the consequences of using flimsy and (at least somewhat) unethical software (which I <i>do</i> - how long do you think I have endured all the little problems of desktop Linux?); if I don't use them, I'll have to remain at a position that's unfavourable for me for years before I can code myself out of it, like how people have been complaining about Twitch and YouTube's unjust punishments for years but still chooses to remain on them. <b>To accept and even become satisfied at this degree of powerlessness is not a way I want to live my life in</b>. </p>
+
+	  <p>So, starting from now, a few things are gonna change:</p>
+
+	  <ul>
+		<li>I'll be using LLMs for:
+		  <ul>
+			<li>Security audits;</li>
+			<li>A majority of repetitive coding tasks (e.g. the MariaDB support mentioned above);</li>
+			<li>Other similar mundane tasks, e.g. automated testing;</li>
+		  </ul>
+		</li>
+		<li>All architectural decisions and required learning (e.g. the implementation details of version control softwares) are still made by me myself.</li>
+	  </ul>
+
+	  <p>-- Z Lin, 2026.10.19</p>
+	</div>
+	
+	<hr />
+	
+	<footer>
+	  &copy; 2026 <a href="https://sebastian.graphics">Zetian Lin</a>
+	</footer>
+  </body>
+</html>
