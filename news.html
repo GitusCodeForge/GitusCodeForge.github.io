@@ -24,6 +24,33 @@
 	<hr />
 
 	<div>
+	  <h2>2026.11.2 v0.2.0 Released</h2>
+	  <ul>
+		<li>Two-factor authentication: email, HOTP/TOTP, and recovery codes, with an admin reset.</li>
+		<li>Issue labels.</li>
+		<li>Session metadata and a session list with revocation.</li>
+		<li>Create and delete branches and tags from the web UI.</li>
+		<li>Pull request reviewers; approvals are bound to the current provider commit.</li>
+		<li>Choose the merge method on the pull request page.</li>
+		<li>Configurable repository size limit.</li>
+		<li>SSH key authentication through sshd's <code>AuthorizedKeysCommand</code>.</li>
+		<li>Control namespace creation and default membership for new accounts.</li>
+		<li>Configurable commit message tags, starting with <code>!no-webhook</code> and <code>!no-ci</code>.</li>
+		<li>Proper git submodule handling.</li>
+		<li>New diff view with a changed-file sidebar, plus UI fixes across settings, reviews and issue labels.</li>
+		<li>Bug fixes for fork pages, refs pages, missing pull requests, CSRF-checked forms and diff line numbers.</li>
+	  </ul>
+
+	  <h2>2026.11.1 v0.1.7</h2>
+	  <ul>
+		<li>MySQL and MariaDB support.</li>
+		<li>Managed update hook that runs the webhook and refreshes fork comparisons.</li>
+		<li>Last-commit listings are memoized inside the repository.</li>
+		<li>Logging levels (info, warn, error, none).</li>
+		<li>Security and performance fixes, including internal error disclosure, receipt binding, rate limits and database indexes.</li>
+		<li>Operation modes renamed to forge, browse-only and host.</li>
+	  </ul>
+
 	  <h2>2026.7.12 v0.1.7-alpha1</h2>
 	  <p>Bug fixes.</p>
 	  

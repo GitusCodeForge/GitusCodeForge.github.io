@@ -28,36 +28,41 @@
 	  
 	  <p>Gitus is a self-hosted <a href="https://en.wikipedia.org/wiki/Forge_(software)">code forge</a> that mainly supports the <a href="https://git-scm.com">Git distributed version control system</a>.</p>
 
-	  <p><b>Latest Release: <a href="https://github.com/GitusCodeForge/Gitus/releases/tag/v0.1.5">v0.1.7-alpha1 (2026-07-12)</a></b><br />
-		<b>Latest Nightly: <a href="https://github.com/GitusCodeForge/Gitus/tree/6204d5b95de97755e1f2b0d60cf8c73741b9018e">v0.1.7-alpha1 (2026-07-12)</a></b></p>
+	  <p><b>Latest Release: <a href="https://github.com/GitusCodeForge/Gitus/releases/tag/v0.2.0">v0.2.0 (2026-11-02)</a></b><br />
+		<b>Latest Nightly: <a href="https://github.com/GitusCodeForge/Gitus/tree/2862c9151a6be4d10abd48f42d319653e39864cc">v0.2.0+ (2026-11-02)</a></b></p>
 
 	  <ul>
 		<li>Simple, functional UI;</li>
 		<li><b>No JavaScript</b> - works all major browsers and a lot of minor ones, including <a href="https://ladybird.org">Ladybird</a>, <a href="http://kmeleonbrowser.org">K-Meleon</a> and <a href="https://www.netsurf-browser.org">NetSurf</a>.</li>
 		<li>Proper web installer for easy installation;</li>
 		<li>Read/write access through SSH with per-namespace and/or per-repository user access control;</li>
-		<li>Issue tracking and pull requests;</li>
+		<li>Issue tracking, pull requests and issue labels;</li>
+		<li>Pull request reviewers; every reviewer must approve the current commit;</li>
 		<li>Webhooks for external CI/CD (experimental feature; subject to change)</li>
 		<li>Support for snippets (à la GitHub snippets)</li>
-		<li>Multiple operation mode for different needs:
+		<li>Three operation modes for different needs:
 		  <ul>
-			<li>Plain Mode for when you only need to have a web interface, similar to <code>git-instaweb</code>.</li>
-			<li>Simple Mode for when you only need mininum features like creating repositories, push/pull by SSH and basic access control.</li>
-			<li>Normal Mode, which comes with all the usual features.</li>
+			<li>Browse-only Mode, when you only need a web interface, similar to <code>git-instaweb</code>;</li>
+			<li>Host Mode, for a solo developer or a small team, with users, namespaces and repositories described by specially designated repositories;</li>
+			<li>Forge Mode, the full-featured mode with database-backed users, namespaces and repositories and web-configurable access control.</li>
 		  </ul>
 		</li>
 		<li>And many tiny things:
 		  <ul>
+			<li>Branch and tag management from the web UI;</li>
+			<li>Session list with per-session revocation;</li>
+			<li>Two-factor authentication (email, HOTP/TOTP, recovery codes);</li>
+			<li>Configurable repository size limits;</li>
+			<li>SSH key authentication through <code>AuthorizedKeysCommand</code>;</li>
 			<li>Labels for repositories;</li>
 			<li>UI for Git Blame;</li>
 			<li>UI for directly editing files;</li>
-			<li>2-Factor Authentication</li>
 			<li><code>Co-Authored-By</code></li>
 		  </ul>
 		</li>
 	  </ul>
 
-	  <p>While we don't have a demo yet, <a href="./screenshot.html">here are a few screenshot from the latest nightly (v0.1.3-b1)</a>.</p>
+	  <p>While we don't have a demo yet, <a href="./screenshot.html">here are a few screenshots of the web interface</a>.</p>
 	  <p>The code repository can currently be found on <a href="https://github.com/GitusCodeForge/Gitus">GitHub</a>.</p>
 	  
 	</div>
